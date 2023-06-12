@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <script src="https://kit.fontawesome.com/e36ede94fd.js" crossorigin="anonymous"></script>
+
+  <script>
+    window.onload = () => {
+      const mobileMenuIcon = document.getElementById('mobile-menu-button')
+      mobileMenuIcon.addEventListener('click', () => {
+        if (mobileMenuIcon.classList.contains('open')) {
+          mobileMenuIcon.classList.remove('open')
+        }
+        else {
+          mobileMenuIcon.classList.add('open')
+        }
+      })
+      const ticketMenuItem = document.getElementById('ticket-menu-item')
+      ticketMenuItem.addEventListener('click', () => {
+        if (ticketMenuItem.classList.contains('open')) {
+          ticketMenuItem.classList.remove('open')
+        }
+        else {
+          ticketMenuItem.classList.add('open')
+        }
+      })
+      const darkModeToggle = document.getElementById('dark-mode-toggle')
+     darkModeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark')) {
+          document.body.classList.remove('dark')
+        }
+        else {
+          document.body.classList.add('dark')
+        }
+      })
+    }
+
+    
+
+
+  </script>
+  <title>Document</title>
+</head>
+
+<body class="dark">
+  <main class="">
+    <header >
+      <!-- <div id="dark-mode-toggle"
+       class="z-10 fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+           <i class="fa-solid fa-sun dark:hidden"></i>
+           <i class="fa-solid fa-moon hidden dark:inline"></i>
+      </div> -->
+      <nav class="sticky z-10 flex top-0 bg-slate-800">
+        <!--logo -->
+        <div class="flex items-center py-3 px-8">
+          <img src="../dist/images/portfolio.png" class="md:w-12 w-10">
+        </div>
+        <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+          <!-- mobile-menu-button -->
+          <div id="mobile-menu-button" class="group peer">
+            <div
+              class="top-0 group-open:rotate-45 transition-all bg-zinc-200 rounded-lg w-8 h-1 group-open:top-2 relative">
+            </div>
+            <div class="transition-all opacity-100 group-open:opacity-0 bg-zinc-200 rounded-lg w-8 h-1 mt-1"></div>
+            <div
+              class="top-0 transition-all group-open:-rotate-45 bg-zinc-200 rounded-lg w-8 h-1 mt-1  group-open:-top-2 relative">
+            </div>
+          </div>
+          <!-- mobile-menus -->
+          <div
+            class="absolute top-[85px] left-0 w-full bg-emerald-500 peer-open:block hidden">
+            <div
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span><a href="#home">Home</a></span>
+            </div>
+            <div
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span><a href="#about">About</a></span>
+            </div>
+            <div
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span><a href="#experience">Experience</a></span>
+          </div>
+            <div id="ticket-menu-item"
+              class="group relative  h-full cursor-pointer items-center justify-center  font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <div class="p-4 text-center font-bold"><a href="#project">Project</a></div>
+              <!--  top-full w-full whitespace-nowrap rounded-b-md text-right bg-pink-500 -->
+              <!-- <div class="hidden group-hover:block">
+                <div
+                  class="text-center p-4 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                  <span>Bootstrap Projects</span>
+                </div>
+                <div
+                  class="text-center p-4 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                  <span>Tailwind Projects</span>
+                </div>
+                <div
+                  class="text-center p-4 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                  <span>Javascript Projects</span>
+                </div>
+                <div
+                  class="text-center p-4 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                  <span>React Projects</span>
+                </div>
+              </div> -->
+            </div>
+           
+            <div
+              class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10">
+              <span><a href="#contact">Contact</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:flex flex-1 items-center justify-end px-5">
+          <div class="menu-item">
+            <span class="text-base"><a href="#home">Home</a></span>
+          </div>
+          <div class="menu-item">
+            <span class="text-base"><a href="#about">About</a></span>
+          </div>
+          <div class="menu-item">
+            <span class="text-base"><a href="#experience">Experience</a></span>
+          </div>
+          <div class="menu-item group">
+            <span class="text-base"><a href="#project">Project</a></span>
+            <!-- <div
+              class="hidden group-hover:block absolute top-full right-0 whitespace-nowrap rounded-b-md text-right bg-emerald-400">
+              <div
+                class="p-2 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                <span class="text-base">Bootstrap Projects</span>
+              </div>
+              <div
+                class="p-2 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                <span class="text-base">Tailwind Projects</span>
+              </div>
+              <div
+                class="p-2 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                <span class="text-base">Javascript Projects</span>
+              </div>
+              <div
+                class="p-2 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-white">
+                <span class="text-base">React Projects</span>
+              </div>
+            </div> -->
+          </div>
+          
+          <div class="menu-item">
+            <span class="text-base"><a href="#contact">Contact</a></span>
+          </div>
+        </div>
+      </nav>
+</header>
+
+<!-- Home -->
+  <section class="bg-slate-900" id="home">
+<div class="container mx-auto pt-12 flex">
+  <!-- items-end justify-end -->
+  <div class="fixed flex flex-col text-slate-200 text-2xl md:mr-12 md:ml-0 mr-5 ml-5 ">
+  <div class="w-[1px] h-24 mx-auto bg-white hover:bg-emerald-500"></div>
+   <a href="https://www.facebook.com/sharika.khan.50309/"><i class="fa-brands fa-facebook pb-3 pt-8 hover:scale-125 hover:text-emerald-500 transition-all"></i></a>
+   <a href="https://www.linkedin.com/in/sharika-parvin-joba-b3b07b1b0/"><i class="fa-brands fa-linkedin py-3 hover:scale-125 hover:text-emerald-500 transition-all"></i></a>
+   <a href="https://github.com/sharika-parvin-joba"><i class="fa-brands fa-github pt-3 pb-8 hover:scale-125 hover:text-emerald-500 transition-all"></i></a>
+   <div class="w-[1px] h-24 mx-auto bg-white hover:bg-emerald-500"></div>
+  </div>
+
+  <div class="md:w-2/3 w-full pl-16">
+  <p class="text-emerald-500 text-lg font-bold">Hi, my name is</p>
+  <p class="md:text-7xl text-5xl text-white font-bold pt-4">Sharika Parvin Joba</p>
+  <p class="md:text-6xl text-4xl font-bold pb-6 text-white/40">I am a Frontend Developer</p>
+  <p class="text-base text-white/50 py-4 lg:w-2/3 w-full">I have completed my Bsc in Computer Science and Engineering from American International University of Bangladesh(AIUB).
+    I am working with React as a <span class="text-emerald-500 font-bold">Frontend Developer</span>. Also trying to develop my skills. In the future I want to be a Full Stack Developer.
+  </p>
+  <button class="hover:border-white hover:text-white hover:bg-emerald-800  transition-all border-2 border-emerald-500 text-emerald-500 text-lg font-semibold rounded-md px-5 py-3 mt-8 mb-16 uppercase">
+   <a href="./images/sharika-parvin-joba.jpg" download="sharika"> Get My CV</a></button>
+</div>
+
+<div class="group relative lg:flex hidden items-center justify-center transition-all">
+  <div class="group-hover:after:transition-all group-hover:after:rounded-md duration-500 ease-in-out group-hover:after:bg-transparent xl:group-hover:after:top-16
+   group-hover:after:-right-10 lg:group-hover:after:top-36  group-hover:after:bottom-0 after:absolute 
+   after:bg-slate-500/30 after:border-[3px] 
+    after:border-emerald-500 lg:after:h-72 md:after:h-[260px] lg:after:w-[250px] md:after:w-[230px]  
+    xl:after:top-24 lg:after:top-44 md:after:top-52 after:z-10" >
+     
+        <img src="./images/sharika-parvin.jpg" class="">
+     </div>
+    
+    </div>
+ 
+</div>
+</section>
+
+<!-- About -->
+<section class="bg-slate-900 py-32" id="about">
+  <!-- after:w-24 after:h-[1px] -->
+  <div class="flex items-center gap-3">
+    <p class="text-slate-300 text-3xl font-bold md:pl-28 pl-20">About Me</p>
+    <div class="h-[1px] md:w-60 w-32 bg-slate-500"></div>
+  </div>
+  
+<div class="container mx-auto grid md:grid-cols-2 grid-cols-1 pl-20">
+  
+  <div class="text-base text-white/50 ">
+    <p class="pt-12">Hi, I am Sharika Parvin Joba. I am very intereseted in web development. Making websites give me pleasure. 
+      I have completed my <span class="text-emerald-500 font-medium">Bechelor's in CSE in 2023</span>. In the beginning of 2021 I have decided to become a Frontend Developer. And I have started my practices.
+      At the beginning I have learnt <span class="text-emerald-500 font-medium">HTML,CSS Then JAVASCRIPT</span> and so on.And now I am trying to be better at ReactJs.
+    </p>
+    <p class="pt-12">I have done a <span class="text-emerald-500 font-medium">Internship as a Frontend Developer.</span>Now I am trying to improve my skills and looking for a good job.
+    I have done some projects. And trying to do some more. Make websites with perfection is a passion for me. I handle my works with honesty and patient</p>
+ </div>
+
+ <div class="md:border-l-[1px] md:px-10 md:py-0 py-5">
+<p class="text-xl font-semibold text-slate-400">Here are some few technologies I've been working with recently-</p>
+<ul class="list-[square] list-inside uppercase pt-6 text-lg text-slate-400">
+  <li>Html</li>
+  <li>Css</li>
+  <li>Bootstrap</li>
+  <li>tailwind</li>
+  <li>Javascript</li>
+  <li>react</li>
+  <li>figma</li>
+</ul>
+ </div>
+</div>
+</section>
+
+<!-- Experience -->
+<section class="bg-slate-900 md:py-32 py-16" id="experience">
+  <!-- after:w-24 after:h-[1px] -->
+  <div class="container mx-auto">
+    <div class="flex items-center gap-3">
+      <p class="text-slate-300 sm:text-3xl text-xl font-bold md:pl-20 pl-20">Where I've Worked</p>
+      <div class="h-[1px] md:w-60 sm:w-24 w-12 bg-slate-500"></div>
+    </div>
+  
+    <div class="relative rounded-lg mt-5 py-4 px-2">
+      <div class="absolute top-0 left-1/2 md:w-4 w-2 ml-[-8px] h-full rounded-full bg-gradient-to-b from-sky-900 via-cyan-900 to-teal-900">
+      <div class="sticky top-1/2">
+       <div class="relative h-4 w-4">
+         <div class="absolute md:h-4 md:w-4 h-2 w-2 animate-ping rounded-full bg-emerald-500 opacity-75"></div>
+         <div class="bg-emerald-500 rounded-full relative md:h-4 md:w-4 h-2 w-2"></div>
+       </div>
+      </div>
+      </div>
+      <div class="grid grid-cols-2 gap-8">
+        <!-- add Experience here -->
+       <div class="sm:text-xl text-[12px] font-semibold text-slate-400 md:pl-20 pl-12 pt-6">
+        <p class="bg-white/10 sm:p-5 p-2 rounded-md">Intern as Frontend Developer</p>
+      </div>
+      <div class="sm:text-base text-[10px] font-semibold text-slate-400">
+        <p class="sm:text-xl text-base">Feather IT</p>
+        <p class="sm:text-sm text-emerald-500">(December 2022-February 2023)</p>
+        <p class="pt-5"><i class="fa-solid fa-caret-right text-emerald-500 pr-3"></i>There I have worked with HTML, CSS, BOOTSTRAP, JAVASCRIPT</p>
+        <p><i class="fa-solid fa-caret-right text-emerald-500 pr-3"></i>I made mt websites for a website like themeforest.</p>
+        <p><i class="fa-solid fa-caret-right text-emerald-500 pr-3"></i>I developed websites from Figma to Html</p>
+        <p><i class="fa-solid fa-caret-right text-emerald-500 pr-3"></i>I have learned how to make documentation for a website</p>
+        <p><i class="fa-solid fa-caret-right text-emerald-500 pr-3"></i>I have learned how to make a website using placeholder images</p>
+        <p><i class="fa-solid fa-caret-right text-emerald-500 pr-3"></i>I have learned how to make a pixel perfect websites</p>
+      
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+</section>
+
+<!-- Projects -->
+<section class="bg-slate-900 md:py-32 py-16" id="project">
+  <!-- after:w-24 after:h-[1px] -->
+  <div class="flex items-center md:gap-3 gap-1">
+    <p class="text-slate-300 sm:text-3xl text-[17px] font-bold md:pl-28 pl-20">Some Projects I've Built</p>
+    <div class="h-[1px] md:w-60 sm:w-24 w-12 bg-slate-500"></div>
+  </div>
+    
+    <div class="container mx-auto">
+
+<div class="grid lg:grid-cols-2 grid-cols-1 mx-20 gap-4 items-center justify-center ">
+
+<div class="relative lg:py-16 py-8" id="project1">
+  <div class="group overflow-hidden">
+    <img src="./images/project1.png" class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a agricultural farm. This project can describe what a agricultural farm can have at their farm.
+       This project is made my using HTML, CSS, TAILWIND, JAVASCRIPT.
+       <a href="https://agriculture-website.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8" id="project2">
+  <div class="group overflow-hidden">
+    <img src="./images/project2.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a online education platform. This project can describe how a online education platform should looklike or give some ideas to design.
+       This project is made my using HTML, CSS, TAILWIND, JAVASCRIPT.
+       <a href="https://onlinecourses-websitedesign.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8" id="project3">
+  <div class="group overflow-hidden">
+    <img src="./images/project3.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a real estate platform. This project can illustrates the design of a real estate website.
+       This project is made my using HTML, CSS, TAILWIND, JAVASCRIPT.
+       <a href="https://dremehome.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8" id="project4">
+  <div class="group overflow-hidden">
+    <img src="./images/project4.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a Zoo based website. This project can illustrates the design of a Zoo website.
+       This project is made my using HTML, CSS, TAILWIND, JAVASCRIPT.
+       <a href="https://junglelife-websitedesign.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8 hidden" id="project5">
+  <div class="group overflow-hidden">
+    <img src="./images/project5.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website is a corporate website based on a product like juice. This project can describe the design of juice products.
+       This project is made my using HTML, CSS, BOOTSTRAP, JAVASCRIPT.
+       <a href="https://corporate-website-tamplatedesign.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8 hidden" id="project6">
+  <div class="group overflow-hidden">
+    <img src="./images/project6.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a digital agency platform. This project describes how the design of a digital agency.
+       This project is made my using HTML, CSS, BOOTSTRAP, JAVASCRIPT.
+       <a href="https://digitalagencywebsite.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8 hidden" id="project7">
+  <div class="group overflow-hidden">
+    <img src="./images/project7.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a Doctor portfolio, This is how a doctor's portfolio can be looklike.
+       This project is made my using HTML, CSS, BOOTSTRAP, JAVASCRIPT.
+       <a href="https://doctors-portfolio-tamplate.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8 hidden" id="project8">
+  <div class="group overflow-hidden">
+    <img src="./images/project8.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs lg:bg-slate-800 lg:px-5 py-5 rounded-lg">It is a website based on a person's portfolio, This is how a portfolio can be looklike.
+       This project is made my using HTML, CSS, BOOTSTRAP, JAVASCRIPT.
+       <a href="https://newsportal website.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+<div class="relative lg:py-16 py-8 hidden" id="project9">
+  <div class="group overflow-hidden">
+    <img src="./images/project9.png"  class="lg:w-[400px] w-[550px] group-hover:scale-125 transition duration-500 ease-in-out">
+  </div>
+ 
+  <div class="lg:absolute xl:-bottom-10 -bottom-5 xl:left-80 left-60">
+    <p class="text-slate-400 text-xs bg-slate-800 p-5 rounded-lg">It is a website based on a online education platform. This project can describe how a online education platform should looklike or give some ideas to design.
+       This project is made my using HTML, CSS, BOOTSTRAP, JAVASCRIPT.
+       <a href="https://portfolio-website-tamplate-design.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square text-xl text-emerald-500"></i></a>
+    </p>
+  </div>
+</div>
+
+</div>
+<div class="flex items-center justify-center py-16">
+  <button id="lode-btn" class="hover:border-white hover:text-white hover:bg-emerald-800  transition-all border-2 border-emerald-500 text-emerald-500 text-lg font-semibold rounded-md px-5 py-3 mt-8  uppercase">LODE MORE</button>
+</div>
+
+</div> 
+   </section>
+
+   <section class="bg-slate-900 py-16" id="contact">
+    <!-- after:w-24 after:h-[1px] -->
+    <div class="flex items-center justify-center gap-3">
+      <div class="h-[1px] md:w-60 w-32 bg-slate-500"></div>
+      <p class="text-slate-300 text-3xl font-bold text-center">Contact Me</p>
+      <div class="h-[1px] md:w-60 w-32 bg-slate-500"></div>
+    </div>
+    
+    <div class="container mx-auto">
+      <p class="text-center py-10 text-slate-400">I am looking for a new opportunity to enhance my skills. If your requirements match my profile please knock me.</p>
+    <div class="text-lg text-emerald-600 text-center">
+      <p>My Email Address : sharikajoba@gmail.com</p>
+    <p>My Phone Number : 01903597552</p>
+    </div>
+    </div>
+
+  </section>
+
+  <footer class="bg-slate-900 pt-16 pb-5">
+   <p class="text-center text-slate-400 text-[13px] hover:text-emerald-400">Built by Sharika Parvin Joba</p>
+   <div class="flex items-center justify-center gap-1 text-slate-400">
+    <a href="https://www.facebook.com/sharika.khan.50309/"><i class="fa-brands fa-facebook  hover:scale-125 hover:text-emerald-500 transition-all"></i></a>
+   <a href="https://www.linkedin.com/in/sharika-parvin-joba-b3b07b1b0/"><i class="fa-brands fa-linkedin  hover:scale-125 hover:text-emerald-500 transition-all"></i></a>
+   <a href="https://github.com/sharika-parvin-joba"><i class="fa-brands fa-github  hover:scale-125 hover:text-emerald-500 transition-all"></i></a>
+   </div>
+   
+   </footer>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
