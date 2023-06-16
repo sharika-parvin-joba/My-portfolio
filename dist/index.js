@@ -5,6 +5,7 @@ btn.addEventListener("click", () => {
   const project7 = document.getElementById("project7");
   const project8 = document.getElementById("project8");
   const project9 = document.getElementById("project9");
+  const project10 = document.getElementById("project10");
   const btnInnerText = btn.innerText;
   if (btnInnerText == "LODE MORE") {
     btn.innerText = "LODE LESS";
@@ -13,6 +14,7 @@ btn.addEventListener("click", () => {
     project7.style.display = "block";
     project8.style.display = "block";
     project9.style.display = "block";
+    project10.style.display = "block";
   } else {
     btn.innerText = "LODE MORE";
     project5.style.display = "none";
@@ -20,6 +22,7 @@ btn.addEventListener("click", () => {
     project7.style.display = "none";
     project8.style.display = "none";
     project9.style.display = "none";
+    project10.style.display = "none";
   }
 
   console.log(btnInnerText);
